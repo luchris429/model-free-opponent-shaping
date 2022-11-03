@@ -1,6 +1,6 @@
 ## Model-Free-Opponent Shaping
 
-#### In ICML 2022 (Spotlight) [[ArXiv]](https://arxiv.org/abs/2205.01447)
+#### In ICML 2022 (Spotlight) [[arXiv]](https://arxiv.org/abs/2205.01447)
 
 [Chris Lu](https://chrislu.page/), [Timon Willi](https://www.timonwilli.com/), [Christian Schroeder de Witt](https://www.schroederdewitt.com/), [Jakob Foerster](https://www.jakobfoerster.com/)
 
