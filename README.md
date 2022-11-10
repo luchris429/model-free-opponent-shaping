@@ -34,7 +34,7 @@ This is a [PyTorch](https://pytorch.org/) based implementation of our ICML 2022 
   git clone https://github.com/luchris429/Model-Free-Opponent-Shaping.git
   
   #create virtual env
-  conda create --name mfos python=3.5
+  conda create --name mfos python=3.8
   source activate mfos
 
   #install requirements
