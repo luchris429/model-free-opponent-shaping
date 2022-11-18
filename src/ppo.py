@@ -23,17 +23,11 @@ class Memory:
 class ActorCritic(nn.Module):
     def __init__(self, state_dim, action_dim):
         super(ActorCritic, self).__init__()
-        # action mean range -1 to 1
         self.actor = nn.Sequential(
             nn.Linear(state_dim, 256),
             nn.Tanh(),
             nn.Linear(256, action_dim * 2),
         )
-        # self.actor =  nn.Sequential(
-        #     nn.Linear(state_dim, 256),
-        #     nn.Tanh(),
-        #     nn.Linear(256, action_dim * 2),
-        #     )
 
         # critic
         self.critic = nn.Sequential(
@@ -41,11 +35,6 @@ class ActorCritic(nn.Module):
             nn.Tanh(),
             nn.Linear(256, 1),
         )
-        # self.critic = nn.Sequential(
-        #     nn.Linear(state_dim, 256),
-        #     nn.Tanh(),
-        #     nn.Linear(256, 1)
-        #     )
 
         self.action_dim = action_dim
         self.state_dim = state_dim
@@ -128,7 +117,6 @@ class PPO:
             rewards.insert(0, discounted_reward)
 
         # Normalizing the rewards:
-        #         rewards = torch.stack(rewards, dtype=torch.float32).to(device)
         rewards = torch.stack(rewards).squeeze(-1)
         rewards = (rewards - rewards.mean()) / (rewards.std() + 1e-5)
 
